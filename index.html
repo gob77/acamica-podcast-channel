@@ -13,109 +13,71 @@
     </head>
     <body>
         <header>
-            <div class="bg"></div>
-            <div class="nav-header">
+            <div class="nav-container">
                 <div class="logo">
-                    <i class="fas fa-microphone fa-2x logo-icon"></i>
-                    <span class="logo-name">Podcast Channel</span>
+                    <span><i class="fa fa-microphone fa-2x" aria-hidden="true"></i></span>
                 </div>
 
-                <nav class="navbar">
-                    <div class="mobile-menu">
-                        <a href=""><i class="fas fa-bars fa-x2"></i></a>
+                <nav>
+                    <input type="checkbox" name="open" id="open" class="open" />
+                    <label for="open" class="close"><i class="fa fa-times fa-2x" aria-hidden="true"></i></label>
+                    <label for="open" class="menu"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></label>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="#">Episodios</a>
+                        <a href="#">Nosotros</a>
+                        <a href="#">Entrevistas</a>
+                        <a href="#">Topicos</a>
                     </div>
-                    <ul class="nav-list">
-                        <li class="nav-pills"><a href="#episodios">Episodios</a></li>
-                        <li class="nav-pills"><a href="#nosotros">Nosotros</a></li>
-                        <li class="nav-pills"><a href="#articulos">Entrevistas</a></li>
-                        <li class="nav-pills"><a href="#contactanos">Topicos</a></li>
-                    </ul>
                 </nav>
             </div>
             <div class="main-header">
-                <h1>Welcome to the Javascript Jabber</h1>
-                <p>The first podcast channel enteirely dedicated to JS</p>
-                <a href="#nosotros">Conoce Mas</a>
+                <h1 class="main-tittle">Hello <span class="overline">world</span> pale blue dot</h1>
+                <div class="desc">
+                    <p class="main-p">Un podcast que explora el mundo de la programacion. Nuevos episodios, todos los jueves cada 15 dias</p>
+                    <a href="#" class="more">Conoce Mas</a>
+                </div>
             </div>
         </header>
-        <section>
-            <div class="episodios" id="episodios">
-                <h2>Top Epidosodios</h2>
-                <iframe src="https://open.spotify.com/embed-podcast/episode/3LdfojFV5boWJMyrdktn98" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed-podcast/episode/0SgXRPGSrJCnbWMLOpyelG" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed-podcast/episode/2LtpEIivQZINIxVrFXmviy" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                <iframe src="https://open.spotify.com/embed-podcast/episode/7CfINk2ublFFnAaQk9j7sz" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+        <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+        <article>
+            <div id="episodios" class="episodios">
+                <div class="tittle-container">
+                    <h1 class="ep">Epidosodios</h1>
+                </div>
+                <div class="ep-container">
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/7AZZy2nJ4R9ZndHW0h2yxt" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/1ezdL2ivAGLwSE6Xbssxqt" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/3cWta1iiQSfvrdHaCbLkSD" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    <iframe src="https://open.spotify.com/embed-podcast/episode/31VyAQAwBiKoHVoYUCEzjQ" width="100%" height="232" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                </div>
             </div>
-            <div class="nosotros-container" id="nosotros">
-                <div class="phone-img">
+
+            <div class="nosotros">
+                <div class="img-container">
                     <img src="./images/phone.png" alt="" />
                 </div>
-                <div class="nosotros">
-                    <h2>De donde venimos</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus molestiae repellat nemo dignissimos quam voluptatem, eos adipisci quos quod excepturi, expedita minima, beatae nulla tempore saepe? Fugit fuga fugiat possimus.</p>
+                <div class="about">
+                    <h1>De donde venimos</h1>
+                    <p>Our posturings, our imagined self-importance, the delusion that we have some privileged position in the Universe, are challenged by this point of pale light. Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
                 </div>
             </div>
-            <div class="invitados" id="invitados">
-                <h2>Invitados/as Estelares</h2>
-                <div class="img-container">
-                    <img src="./images/An E.R.A.Univac 1103 computer in the 1950s.png" alt="An E.R.A.Univac 1103 computer in the 1950s.png" />
-                    <img src="./images/grace-hopper.png" alt="Grace Hoper" />
-                    <img src="./images/Katie-Bouman.png" alt="Katie Bouman" />
-                </div>
-                <div class="img-container">
-                    <img src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton" />
-                    <img src="./images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer" />
-                    <img src="./images/susan-kare.png" alt="Susan Kare" />
+
+            <div class="invitados">
+                <h1>Invitadas/os estelares</h1>
+                <img src="./images/grace-hopper.png" alt="Grace Hopper" />
+                <img src="./images/Katie-Bouman.png" alt="Katie-Bouman" />
+                <img src="./images/Margaret_Hamilton.png" alt="Margaret Hamilton" />
+                <img src="./images/An E.R.A.Univac 1103 computer in the 1950s.png" alt="An E.R.A.Univac 1103 computer in the 1950s" />
+                <img src="./images/Computer operators with an Eniac — the world’s first programmable general-purpose computer.png" alt="Computer operators with an Eniac — the world’s first programmable general-purpose computer" />
+                <img src="./images/susan-kare.png" alt="Susan Kare" />
+            </div>
+
+            <div class="topicos" id="topicos">
+                <div class="tittle-container">
+                    <h1>Algunos de nuestros temas</h1>
                 </div>
             </div>
-            <div id="topicos">
-                <h2>Algunos de nuestros temas</h2>
-                <div class="topicos-container">
-                    <div class="topicos">
-                        <img src="./images/icon1.svg" alt="" />
-                        <span>trabajo remoto</span>
-                    </div>
-                    <div class="topicos">
-                        <img src="./images/icon2.svg" alt="" />
-                        <span>repensando la programacion</span>
-                    </div>
-                    <div class="topicos">
-                        <img src="./images/icon3.svg" alt="" />
-                        <span>bases del codigo</span>
-                    </div>
-                    <div class="topicos">
-                        <img src="./images/icon4.svg" alt="" />
-                        <span>seguridad informatica</span>
-                    </div>
-                </div>
-            </div>
-            <div id="ultimos-episodios">
-                <h2>Queres saber las ultimas novedades</h2>
-                <button>Escuchar los espisodios</button>
-            </div>
-            <footer>
-                <div class="date">
-                    &#169; Acamica - 2019
-                    <p>test</p>
-                </div>
-                <div class="social-media">
-                    <div class="social-media__container">
-                        <a href="#"><i class="fab fa-spotify"></i></a>
-                    </div>
-                    <div class="social-media__container">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    <div class="social-media__container">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                    <div class="social-media__container">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                    </div>
-                    <div class="social-media__container">
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                    </div>
-                </div>
-            </footer>
-        </section>
+        </article>
     </body>
 </html>
