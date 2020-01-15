@@ -1,3 +1,5 @@
+/* estilos generales */
+
 * {
     margin: 0;
     padding: 0;
@@ -112,7 +114,8 @@ header {
 }
 
 .open,
-.close {
+.close,
+.desktop {
     display: none;
 }
 
@@ -192,15 +195,24 @@ article {
 .episodios {
     width: 100%;
     margin-top: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 .ep-container {
-    max-width: 100%;
+    width: 100%;
     padding: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.desktop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 iframe {
@@ -242,7 +254,6 @@ iframe {
 /* Invitados */
 
 .invitados {
-    /* background-color: white; */
     display: flex;
     flex-direction: column;
 }
@@ -342,21 +353,132 @@ footer {
     }
 }
 
-.episodios-bg {
-    clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 3%);
-    background: linear-gradient(173deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 163, 1) 100%);
-    background-color: red;
+.bg {
     width: 100%;
-    height: 1250px;
     z-index: -1;
     position: absolute;
+    background: linear-gradient(173deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 163, 1) 100%);
+}
+
+.episodios-bg {
+    clip-path: polygon(100% 0, 100% 95%, 0 100%, 0 3%);
+    height: 1250px;
 }
 
 .footer-bg {
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 350px;
     clip-path: polygon(0 17%, 100% 0, 100% 100%, 0% 100%);
-    background: linear-gradient(173deg, rgba(0, 0, 255, 1) 0%, rgba(0, 0, 163, 1) 100%);
+    height: 350px;
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    header {
+        height: 450px;
+        width: 80%;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+        list-style: none;
+    }
+
+    .desktop li {
+        margin: 10px;
+    }
+
+    .pills {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #060a24;
+        font-size: 16px;
+    }
+
+    .pills:hover {
+        color: #00f3bb;
+        text-decoration: line-through;
+    }
+
+    .pills:active {
+        color: rgba(6, 10, 36, 0.56);
+        text-decoration: line-through;
+    }
+
+    .header-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 250px;
+        padding: 0;
+    }
+
+    .main-header {
+        width: 90%;
+        height: 80%;
+        justify-content: space-around;
+    }
+
+    .main-tittle {
+        margin: 0;
+        width: 74%;
+    }
+
+    .main-tittle,
+    .overline,
+    .dot {
+        font-family: "IBM Plex Sans", sans-serif;
+        font-size: 64px;
+        color: #060a24;
+        letter-spacing: 0;
+    }
+
+    .dot {
+        color: #0000ec;
+    }
+
+    .desc {
+        align-items: flex-start;
+        height: 80%;
+        width: 70%;
+        justify-content: space-around;
+    }
+
+    /* episodios */
+
+    .episodios {
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ep-container {
+        flex-flow: row wrap;
+        width: 110%;
+    }
+
+    .desktop-container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    iframe {
+        margin: 15px;
+    }
+
+    .episodios-bg {
+        clip-path: polygon(0 8%, 100% 0, 100% 90%, 0% 100%);
+        margin-top: -50px;
+        height: 850px;
+    }
 }
