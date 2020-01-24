@@ -2,7 +2,7 @@
 
 ## Primer proyecto de la carrera de desarrollo web full stack de Acamica
 
-**_- Progress 90% ~ 95%_**
+**_- Progress: Waitin for evaluation_**
 
 ## To Do.
 
